@@ -25,6 +25,8 @@ class ViewController: UIViewController {
 //   
     @IBAction func login(_ sender: UIButton) {
         
+        print("hello")
+        
     //SecondViewController?.incomingText = emailTextField.text!
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
