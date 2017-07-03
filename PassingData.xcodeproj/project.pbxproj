@@ -16,6 +16,7 @@
 		CE2EC8381F062A6600B71D44 /* PassingDataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2EC8371F062A6600B71D44 /* PassingDataUITests.swift */; };
 		CE2EC8461F062B1900B71D44 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2EC8451F062B1900B71D44 /* SecondViewController.swift */; };
 		CE89E8F11F0969EF008F83FD /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE89E8F01F0969EF008F83FD /* WelcomeViewController.swift */; };
+		CECD12531F0A6472008B1CFC /* LogoutAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECD12521F0A6472008B1CFC /* LogoutAlertViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		CE2EC8391F062A6600B71D44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE2EC8451F062B1900B71D44 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		CE89E8F01F0969EF008F83FD /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		CECD12521F0A6472008B1CFC /* LogoutAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoutAlertViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				CE2EC8171F062A6600B71D44 /* AppDelegate.swift */,
 				CE2EC8191F062A6600B71D44 /* ViewController.swift */,
 				CE2EC81B1F062A6600B71D44 /* Main.storyboard */,
+				CECD12521F0A6472008B1CFC /* LogoutAlertViewController.swift */,
 				CE89E8F01F0969EF008F83FD /* WelcomeViewController.swift */,
 				CE2EC8451F062B1900B71D44 /* SecondViewController.swift */,
 				CE2EC81E1F062A6600B71D44 /* Assets.xcassets */,
@@ -268,6 +271,7 @@
 				CE2EC8461F062B1900B71D44 /* SecondViewController.swift in Sources */,
 				CE89E8F11F0969EF008F83FD /* WelcomeViewController.swift in Sources */,
 				CE2EC81A1F062A6600B71D44 /* ViewController.swift in Sources */,
+				CECD12531F0A6472008B1CFC /* LogoutAlertViewController.swift in Sources */,
 				CE2EC8181F062A6600B71D44 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

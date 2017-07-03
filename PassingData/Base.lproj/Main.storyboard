@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PassingData" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainPage" id="BYZ-38-t0r" customClass="ViewController" customModule="PassingData" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -209,9 +209,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Logout"/>
                                 <connections>
-                                    <segue destination="Zij-y3-Lf6" kind="popoverPresentation" popoverAnchorView="YHS-m3-2MD" id="Cia-Kt-t2M">
-                                        <popoverArrowDirection key="popoverArrowDirection" down="YES"/>
-                                    </segue>
+                                    <action selector="logout:" destination="u8q-HI-4fB" eventType="touchUpInside" id="Spc-cZ-bEs"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -223,10 +221,10 @@
             </objects>
             <point key="canvasLocation" x="2573.5" y="138.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Logout Alert View Controller-->
         <scene sceneID="27u-xV-4Cc">
             <objects>
-                <viewController id="Zij-y3-Lf6" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LogoutAlertViewController" id="Zij-y3-Lf6" customClass="LogoutAlertViewController" customModule="PassingData" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UlX-H1-33q"/>
                         <viewControllerLayoutGuide type="bottom" id="Q0Z-JM-XGD"/>
@@ -248,6 +246,9 @@
                                 <state key="normal" title="Yes">
                                     <color key="titleColor" red="0.94511010360000003" green="0.28285946923546157" blue="0.20252058715801555" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="logoutYes:" destination="Zij-y3-Lf6" eventType="touchUpInside" id="wqa-ea-Nco"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BwB-gn-PDx">
                                 <rect key="frame" x="260" y="290" width="30" height="30"/>
@@ -255,6 +256,9 @@
                                 <state key="normal" title="No">
                                     <color key="titleColor" red="0.33444553700000001" green="0.94511010360000003" blue="0.3974834679" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="logoutNo:" destination="Zij-y3-Lf6" eventType="touchUpInside" id="zfB-CS-Cbe"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

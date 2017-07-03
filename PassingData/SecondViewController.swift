@@ -16,8 +16,6 @@ class SecondViewController: UIViewController {
     
     @IBOutlet weak var password: UITextField!
     
-    //let userdata = UserDefaults.standard
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -29,15 +27,15 @@ class SecondViewController: UIViewController {
         return emailTest.evaluate(with: email)
     }
     
-    let storyboar : UIStoryboard =  UIStoryboard(name: "Main", bundle: nil)
+    let storyboardObject : UIStoryboard =  UIStoryboard(name: "Main", bundle: nil)
     
     @IBAction func signup(_ sender: Any) {
         
         let isemailValidated = emailValidation(email: email_id.text!)
         
-        let nextViewController = self.storyboar.instantiateViewController(withIdentifier: "WelcomeViewController") as! WelcomeViewController
+        let nextViewController = self.storyboardObject.instantiateViewController(withIdentifier: "WelcomeViewController") as! WelcomeViewController
         
-        if (userName.text?.isEmpty)! || (email_id.text?.isEmpty)! || (password.text?.isEmpty)! {
+        if (userName.text?.characters.count == 0) || (email_id.text?.characters.count == 0) || (password.text?.characters.count == 0)  {
             
             let alert = UIAlertController(title: "Field is Empty", message: "Please fill all the fields to signUp", preferredStyle: UIAlertControllerStyle.alert)
             
@@ -45,21 +43,19 @@ class SecondViewController: UIViewController {
             
             self.present(alert, animated: true, completion: nil)
             
-        } else if (isemailValidated == false) || (password.text?.characters.count)! < 6 {
+        } else if let minCharacters = password.text?.characters.count, minCharacters < 6 || isemailValidated == false {
             
-            let alert = UIAlertController(title: "Incorrect", message: "The mail id or password provided is not valid. Try again.", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: "Invalid", message: "Please proivide valid details to signUp", preferredStyle: UIAlertControllerStyle.alert)
             
             alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.cancel, handler: nil))
             
             self.present(alert, animated: true, completion: nil)
             
         } else {
-            //userdata.set(userName.text!, forKey: "UserName")
-            
-            self.present(nextViewController, animated: true, completion: nil)
-            //self.navigationController?.pushViewController(nextViewController, animated: true)
+            self.navigationController?.pushViewController(nextViewController, animated: true)
             
         }
+        
     }
     
 }

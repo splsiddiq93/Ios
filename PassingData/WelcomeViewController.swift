@@ -9,9 +9,17 @@
 import UIKit
 
 class WelcomeViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+    }
+    
+    @IBAction func logout(_ sender: Any) {
+        
+        let gotoConfirmlogoutPage = UIStoryboard(name: "Main", bundle: nil)
+        let logoutViewController = gotoConfirmlogoutPage.instantiateViewController(withIdentifier: "LogoutAlertViewController") as! LogoutAlertViewController
+        self.navigationController?.pushViewController(logoutViewController, animated: true)
+        
     }
 }
