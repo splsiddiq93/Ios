@@ -16,6 +16,8 @@ class SecondViewController: UIViewController {
     
     @IBOutlet weak var password: UITextField!
     
+    //let userdata = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -36,16 +38,28 @@ class SecondViewController: UIViewController {
         let nextViewController = self.storyboar.instantiateViewController(withIdentifier: "WelcomeViewController") as! WelcomeViewController
         
         if (userName.text?.isEmpty)! || (email_id.text?.isEmpty)! || (password.text?.isEmpty)! {
-           print("One of the field is missing")
+            
+            let alert = UIAlertController(title: "Field is Empty", message: "Please fill all the fields to signUp", preferredStyle: UIAlertControllerStyle.alert)
+            
+            alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.cancel, handler: nil))
+            
+            self.present(alert, animated: true, completion: nil)
             
         } else if (isemailValidated == false) || (password.text?.characters.count)! < 6 {
-            print("Please provide valid details")
-
+            
+            let alert = UIAlertController(title: "Incorrect", message: "The mail id or password provided is not valid. Try again.", preferredStyle: UIAlertControllerStyle.alert)
+            
+            alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.cancel, handler: nil))
+            
+            self.present(alert, animated: true, completion: nil)
+            
         } else {
+            //userdata.set(userName.text!, forKey: "UserName")
+            
             self.present(nextViewController, animated: true, completion: nil)
             //self.navigationController?.pushViewController(nextViewController, animated: true)
-
+            
         }
     }
-   
+    
 }
