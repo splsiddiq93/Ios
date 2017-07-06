@@ -14,10 +14,13 @@ class LogoutAlertViewController: UIViewController {
         super.viewDidLoad()
         
     }
+    let rootviewStoryBoard = UIStoryboard(name: "Main", bundle: nil)
     
     
     @IBAction func logoutYes(_ sender: Any) {
-        navigationController?.popToRootViewController(animated: true)
+        let rootView = rootviewStoryBoard.instantiateViewController(withIdentifier: "mainPage") as! ViewController
+        self.navigationController?.pushViewController(rootView, animated: true)
+        UserDefaults.standard.set(false, forKey: "isLoggedIn")
         
     }
     
