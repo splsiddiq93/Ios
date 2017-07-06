@@ -21,9 +21,9 @@ class SecondViewController: UIViewController {
     }
     
     func emailValidation(email:String) -> Bool {
-        let predicate = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
+        let regex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
         
-        let emailTest = NSPredicate(format:"SELF MATCHES %@", predicate)
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", regex)
         return emailTest.evaluate(with: email)
     }
     
@@ -35,6 +35,10 @@ class SecondViewController: UIViewController {
         
         let nextViewController = self.storyboardObject.instantiateViewController(withIdentifier: "WelcomeViewController") as! WelcomeViewController
         
+        UserDefaults.standard.set(userName.text!, forKey: "User")
+        UserDefaults.standard.set(email_id.text!, forKey: "Email-ID")
+        UserDefaults.standard.set(password.text!, forKey: "Password")
+
         if (userName.text?.characters.count == 0) || (email_id.text?.characters.count == 0) || (password.text?.characters.count == 0)  {
             
             let alert = UIAlertController(title: "Field is Empty", message: "Please fill all the fields to signUp", preferredStyle: UIAlertControllerStyle.alert)
