@@ -18,6 +18,17 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.tabBarController?.tabBar.isHidden = true
+        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        self.tabBarController?.tabBar.isHidden = false
         
     }
     
@@ -52,7 +63,7 @@ class LoginViewController: UIViewController {
         
         let userexists = userExists(data: userName.text!)
         if userexists {
-            let welcome = welcomePage.instantiateViewController(withIdentifier: "WelcomeViewController") as! WelcomeViewController
+            let welcome = welcomePage.instantiateViewController(withIdentifier: "TabBar") as! UITabBarController
             self.navigationController?.pushViewController(welcome, animated: true)
             UserDefaults.standard.set(true, forKey: "isLoggedIn")
         } else {
