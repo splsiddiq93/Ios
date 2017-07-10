@@ -19,28 +19,42 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
     }
     
-    func userExists(name: String, Userpassword: String) ->Bool {
+    func userExists(data: String) ->Bool {
         
-        let username = UserDefaults.standard.string(forKey: name)
-        let authenticate = UserDefaults.standard.string(forKey: Userpassword)
-        if username! == userName.text! && password.text! == authenticate! {
+        var currentUser = String(), currentPassWord = String()
+        
+        let userDetails = UserDefaults.standard.dictionary(forKey: data)
+        UserDefaults.standard.set(userName.text!, forKey: "currentUser")
+        guard let tempDetails = userDetails else {
+            return false
+        }
+        
+        for (key, value) in tempDetails{
+            if key == "username" {
+                currentUser = value as! String
+            } else if key == "password" {
+                currentPassWord = value as! String
+            }
+        }
+        if let user = userName.text, let userPassword = password.text, currentUser == user && currentPassWord == userPassword {
+            
             return true
         }
         return false
     }
+    
     let welcomePage = UIStoryboard(name: "Main", bundle: nil)
     
-    let userdefault = UserDefaults.standard
     
     @IBAction func Login(_ sender: UIButton) {
-        let userexists = userExists(name: "User", Userpassword: "Password")
+        
+        let userexists = userExists(data: userName.text!)
         if userexists {
             let welcome = welcomePage.instantiateViewController(withIdentifier: "WelcomeViewController") as! WelcomeViewController
             self.navigationController?.pushViewController(welcome, animated: true)
-            userdefault.set(true, forKey: "isLoggedIn")
+            UserDefaults.standard.set(true, forKey: "isLoggedIn")
         } else {
             let alert = UIAlertController(title: "Invalid Details", message: "Please provide valid userName and password", preferredStyle: UIAlertControllerStyle.alert)
             

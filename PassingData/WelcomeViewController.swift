@@ -12,20 +12,20 @@ class WelcomeViewController: UIViewController {
     
     @IBOutlet weak var welcomeLabel: UILabel!
     
-    let user = UserDefaults.standard.string(forKey: "User")
     
-    
+    let storyBaord = UIStoryboard(name: "Main", bundle: nil)
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        let user = UserDefaults.standard.string(forKey: "currentUser")
+        welcomeLabel.text! = "Hi! welcome"+" "+user!
         
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
-        welcomeLabel.text! = "Hi! Welcome"+" "+user!
-
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -36,10 +36,7 @@ class WelcomeViewController: UIViewController {
     
     @IBAction func logout(_ sender: Any) {
         
-        let gotoConfirmlogoutPage = UIStoryboard(name: "Main", bundle: nil)
-        let logoutViewController = gotoConfirmlogoutPage.instantiateViewController(withIdentifier: "LogoutAlertViewController") as! LogoutAlertViewController
+        let logoutViewController = storyBaord.instantiateViewController(withIdentifier: "LogoutAlertViewController") as! LogoutAlertViewController
         self.navigationController?.pushViewController(logoutViewController, animated: true)
-
-        
     }
 }
