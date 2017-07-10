@@ -162,10 +162,10 @@
             </objects>
             <point key="canvasLocation" x="2585" y="139"/>
         </scene>
-        <!--Login View Controller-->
+        <!--Item-->
         <scene sceneID="Sgg-jq-eTa">
             <objects>
-                <viewController id="bL6-06-xJ0" customClass="LoginViewController" customModule="PassingData" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="bL6-06-xJ0" customClass="LoginViewController" customModule="PassingData" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aJR-3D-pIC"/>
                         <viewControllerLayoutGuide type="bottom" id="Lli-nI-XzO"/>
@@ -222,6 +222,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.35527239999999999" green="0.92974843149999997" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="W9b-XQ-Edb"/>
                     <connections>
                         <outlet property="password" destination="uVi-pd-YOn" id="kp3-qE-0YQ"/>
                         <outlet property="userName" destination="X4T-PY-ove" id="VwW-jy-a2o"/>
