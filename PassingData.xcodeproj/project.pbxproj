@@ -15,8 +15,10 @@
 		CE2EC82D1F062A6600B71D44 /* PassingDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2EC82C1F062A6600B71D44 /* PassingDataTests.swift */; };
 		CE2EC8381F062A6600B71D44 /* PassingDataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2EC8371F062A6600B71D44 /* PassingDataUITests.swift */; };
 		CE2EC8461F062B1900B71D44 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2EC8451F062B1900B71D44 /* SecondViewController.swift */; };
+		CE6FD7F91F13801E00E2C385 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FD7F81F13801E00E2C385 /* SettingsViewController.swift */; };
+		CE6FD7FB1F13803500E2C385 /* PeersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FD7FA1F13803500E2C385 /* PeersViewController.swift */; };
+		CE6FD7FF1F13A37200E2C385 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FD7FE1F13A37200E2C385 /* NavigationViewController.swift */; };
 		CE89E8F11F0969EF008F83FD /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE89E8F01F0969EF008F83FD /* WelcomeViewController.swift */; };
-		CEA3C46D1F0CCE6100BDE4B8 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3C46C1F0CCE6100BDE4B8 /* NavigationViewController.swift */; };
 		CECD12531F0A6472008B1CFC /* LogoutAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECD12521F0A6472008B1CFC /* LogoutAlertViewController.swift */; };
 		CED20D661F0B9917001E9FB4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED20D651F0B9917001E9FB4 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
@@ -53,8 +55,10 @@
 		CE2EC8371F062A6600B71D44 /* PassingDataUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassingDataUITests.swift; sourceTree = "<group>"; };
 		CE2EC8391F062A6600B71D44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE2EC8451F062B1900B71D44 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		CE6FD7F81F13801E00E2C385 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		CE6FD7FA1F13803500E2C385 /* PeersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeersViewController.swift; sourceTree = "<group>"; };
+		CE6FD7FE1F13A37200E2C385 /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = SOURCE_ROOT; };
 		CE89E8F01F0969EF008F83FD /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		CEA3C46C1F0CCE6100BDE4B8 /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NavigationViewController.swift; path = ../NavigationViewController.swift; sourceTree = "<group>"; };
 		CECD12521F0A6472008B1CFC /* LogoutAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoutAlertViewController.swift; sourceTree = "<group>"; };
 		CED20D651F0B9917001E9FB4 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,10 +112,12 @@
 			isa = PBXGroup;
 			children = (
 				CE2EC81B1F062A6600B71D44 /* Main.storyboard */,
+				CE6FD7F81F13801E00E2C385 /* SettingsViewController.swift */,
+				CE6FD7FA1F13803500E2C385 /* PeersViewController.swift */,
 				CE2EC8171F062A6600B71D44 /* AppDelegate.swift */,
-				CEA3C46C1F0CCE6100BDE4B8 /* NavigationViewController.swift */,
 				CE2EC8191F062A6600B71D44 /* ViewController.swift */,
 				CED20D651F0B9917001E9FB4 /* LoginViewController.swift */,
+				CE6FD7FE1F13A37200E2C385 /* NavigationViewController.swift */,
 				CECD12521F0A6472008B1CFC /* LogoutAlertViewController.swift */,
 				CE89E8F01F0969EF008F83FD /* WelcomeViewController.swift */,
 				CE2EC8451F062B1900B71D44 /* SecondViewController.swift */,
@@ -277,10 +283,12 @@
 				CED20D661F0B9917001E9FB4 /* LoginViewController.swift in Sources */,
 				CE2EC8461F062B1900B71D44 /* SecondViewController.swift in Sources */,
 				CE89E8F11F0969EF008F83FD /* WelcomeViewController.swift in Sources */,
+				CE6FD7FF1F13A37200E2C385 /* NavigationViewController.swift in Sources */,
 				CE2EC81A1F062A6600B71D44 /* ViewController.swift in Sources */,
 				CECD12531F0A6472008B1CFC /* LogoutAlertViewController.swift in Sources */,
-				CEA3C46D1F0CCE6100BDE4B8 /* NavigationViewController.swift in Sources */,
+				CE6FD7FB1F13803500E2C385 /* PeersViewController.swift in Sources */,
 				CE2EC8181F062A6600B71D44 /* AppDelegate.swift in Sources */,
+				CE6FD7F91F13801E00E2C385 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

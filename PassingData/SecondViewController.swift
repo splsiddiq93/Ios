@@ -22,6 +22,18 @@ class SecondViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.tabBarController?.tabBar.isHidden = true
+
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        self.tabBarController?.tabBar.isHidden = false
+
+    }
+    
     func emailValidation(email:String) -> Bool {
         let regex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
         
@@ -37,7 +49,7 @@ class SecondViewController: UIViewController {
         
         let isemailValidated = emailValidation(email: email_id.text!)
         
-        let nextViewController = self.storyboardObject.instantiateViewController(withIdentifier: "WelcomeViewController") as! WelcomeViewController
+        let nextViewController = self.storyboardObject.instantiateViewController(withIdentifier: "TabBar") as! UITabBarController
         
         if (userName.text?.characters.count == 0) || (email_id.text?.characters.count == 0) || (password.text?.characters.count == 0)  {
             
